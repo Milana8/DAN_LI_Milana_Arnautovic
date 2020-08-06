@@ -145,25 +145,23 @@ namespace Zadatak_1.ViewModel
             try
             {
                 string password = (o as PasswordBox).Password;
-                tblDoctor doctor = service.GetDoctor(UserName, Password);
-                if (doctor != null)
+                
+                if (service.GetDoctor(UserName,Password)!=null)
                 {
 
-                    DoctorView doctorView = new DoctorView();
-                    doctorView.ShowDialog();
+                    Doctor = service.GetDoctor(UserName, Password);
+                   
                     view.Close();
-                    return;
+                    
                 }
-                tblPatient patient = service.GetPatient(UserName, Password);
-                if (patient != null)
+                else if (service.GetPatient(UserName, Password) != null)
                 {
 
-                    PatientView patientView = new PatientView();
-                    patientView.Show();
+                    Patient = service.GetPatient(UserName, Password);
+                   
                     view.Close();
-                    return;
-                }
 
+                }
                 else
                 {
                     MessageBox.Show("Incorrect username or password");
