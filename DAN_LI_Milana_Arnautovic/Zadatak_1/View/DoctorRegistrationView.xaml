@@ -7,6 +7,108 @@
         mc:Ignorable="d"
         Title="DoctorRegistrationView" Height="450" Width="800">
     <Grid>
-        
+
+        <Label Content="DoctorName:"
+               Name="lblDoctorName"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,84,0,0"
+               Width="88" />
+        <Label Content="DoctorSurname:"
+               Name="lblDoctorSurname"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,134,0,0"
+               Width="107" />
+        <Label Content="JMBG:"
+               Name="lblJMBG"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,190,0,0"
+               Width="70" />
+        <Label Content="AccountNumber:"
+               Name="lblAccountNumber"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,239,0,0"
+               Width="107" />
+
+        <Label Content="Username:"
+               Name="lblUsername"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,342,0,0"
+               Width="70" />
+        <Label Content="Pasword:"
+               Name="lblPasword"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Margin="50,287,0,0"
+               Width="70" />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtDoctorName"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,87,0,0" 
+                 Text="{Binding Doctor.DoctorName,UpdateSourceTrigger=PropertyChanged}"
+                 />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtDoctorSurname"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="{Binding Doctor.DoctorSurname,UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,134,0,0" />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtJMBG"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="{Binding Doctor.JMBG,UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,192,0,0"
+                />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtAccountNumber"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="{Binding Doctor.AccountNumber,UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,242,0,0"
+                 />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtPasword"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="{Binding Doctor.Pasword,UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,350,0,0"
+                 />
+        <TextBox HorizontalAlignment="Left"
+                 Name="txtUsername"
+                 Height="23"
+                 TextWrapping="Wrap"
+                 Text="{Binding Doctor.Username,UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120"
+                 Margin="266,289,0,0"
+                 />
+        <Button Content="Save"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="590,134,0,0"
+                Command="{Binding Save,UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Close"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="590,177,0,0"
+                Command="{Binding Close,UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

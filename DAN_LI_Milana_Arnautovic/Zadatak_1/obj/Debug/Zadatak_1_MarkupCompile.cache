@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Korisnik\Desktop\DAN_LI_Milana_Arnautovic\DAN_LI_Milana_Arnautovic\Zadatak_1\App.xaml
-11151548125
-2-1129149820
-151392889599
+6-348658132
+21894258847
+24-1119777368
 18-994772502
-MainWindow.xaml;
+MainWindow.xaml;View\DoctorRegistrationView.xaml;View\DoctorView.xaml;View\LoginView.xaml;View\PatientRegistrationView.xaml;View\PatientView.xaml;
 
-True
+False
 
