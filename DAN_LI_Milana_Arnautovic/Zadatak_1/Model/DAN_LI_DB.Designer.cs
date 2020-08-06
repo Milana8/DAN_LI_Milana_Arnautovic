@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Korisnik\Desktop\DAN_LI_Milana_Arnautovic\DAN_LI_Milana_Arnautovic\Zadatak_1\DAN_LI_DB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Korisnik\Desktop\DAN_LI_Milana_Arnautovic\DAN_LI_Milana_Arnautovic\Zadatak_1\Model\DAN_LI_DB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
