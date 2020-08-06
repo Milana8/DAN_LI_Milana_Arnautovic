@@ -64,19 +64,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DAN_LI_DB.cs">
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Model\DAN_LI_DB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAN_LI_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblDoctor.cs">
+    <Compile Include="Service.cs" />
+    <Compile Include="Model\tblDoctor.cs">
       <DependentUpon>DAN_LI_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblPatient.cs">
+    <Compile Include="Model\tblPatient.cs">
       <DependentUpon>DAN_LI_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblSickLeave.cs">
+    <Compile Include="Model\tblSickLeave.cs">
       <DependentUpon>DAN_LI_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DoctorRegistrationViewModel.cs" />
+    <Compile Include="ViewModel\DoctorViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\PatientRegistrationViewModel.cs" />
+    <Compile Include="ViewModel\PatientViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\DoctorRegistrationView.xaml.cs">
+      <DependentUpon>DoctorRegistrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DoctorView.xaml.cs">
+      <DependentUpon>DoctorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientRegistrationView.xaml.cs">
+      <DependentUpon>PatientRegistrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PatientView.xaml.cs">
+      <DependentUpon>PatientView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -86,12 +109,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DAN_LI_DB.Context.cs">
+    <Compile Include="Model\DAN_LI_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAN_LI_DB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAN_LI_DB.Designer.cs">
+    <Compile Include="Model\DAN_LI_DB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DAN_LI_DB.edmx</DependentUpon>
@@ -100,6 +123,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\DoctorRegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DoctorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PatientRegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PatientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -119,11 +162,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DAN_LI_DB.edmx">
+    <EntityDeploy Include="Model\DAN_LI_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DAN_LI_DB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DAN_LI_DB.edmx.diagram">
+    <None Include="Model\DAN_LI_DB.edmx.diagram">
       <DependentUpon>DAN_LI_DB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -136,12 +179,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAN_LI_DB.Context.tt">
+    <Content Include="Model\DAN_LI_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DAN_LI_DB.Context.cs</LastGenOutput>
       <DependentUpon>DAN_LI_DB.edmx</DependentUpon>
     </Content>
-    <Content Include="DAN_LI_DB.tt">
+    <Content Include="Model\DAN_LI_DB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DAN_LI_DB.edmx</DependentUpon>
       <LastGenOutput>DAN_LI_DB.cs</LastGenOutput>
@@ -150,5 +193,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
